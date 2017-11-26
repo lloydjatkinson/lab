@@ -1,4 +1,4 @@
-﻿import {
+import {
     keyExists,
     getKeyValue,
     setKeyValue
