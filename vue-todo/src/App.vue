@@ -1,7 +1,8 @@
 <template>
     <div id="app">
         <!-- <img src="./assets/logo.png"> -->
-        <todo/>
+
+        <todo class="feature" />
     </div>
 </template>
 
@@ -24,5 +25,12 @@ export default {
     /* text-align: center; */
     color: #2c3e50;
     /* margin-top: 60px; */
+
+}
+
+.feature {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
 }
 </style>

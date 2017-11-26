@@ -43,13 +43,13 @@ export default {
     },
     computed: {
         pendingCount: function () {
-            return this.items.filter(item => item.done === false).length;
+            return this.items.filter(item => item.completed === false).length;
         },
         pendingItems: function () {
-            return this.items.filter(item => item.done === false);
+            return this.items.filter(item => item.completed === false);
         },
         completedItems: function () {
-            return this.items.filter(item => item.done);
+            return this.items.filter(item => item.completed);
         },
         totalCount: function () {
             return this.items.length;
@@ -69,6 +69,7 @@ export default {
 <style scoped>
     ul {
         list-style-type: none;
+        padding: 0px;
     }
     
     ul li {
