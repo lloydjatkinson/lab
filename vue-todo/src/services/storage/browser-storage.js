@@ -1,23 +1,10 @@
-export function keyExists (key) {
-    if (localStorage.getItem(key)) {
-        return true;
-    }
+import {
+    keyExists,
+    getKeyValue,
+    setKeyValue
+} from './storage/browser-storage';
 
-    return false;
+export function save(text) {
+    setKeyValue('test', text);
 }
 
-export function setKeyValue (key, value) {
-    localStorage.setItem(key, value);
-}
-
-export function getKeyValue (key) {
-    return localStorage.getItem(key);
-}
-
-export function removeKeyValue (key) {
-    localStorage.removeItem(key);
-}
-
-export function clearStorage () {
-    localStorage.clear();
-}
