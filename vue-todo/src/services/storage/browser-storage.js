@@ -1,4 +1,4 @@
-export function keyExists (key) {
+﻿export function keyExists (key) {
     if (localStorage.getItem(key)) {
         return true;
     }
