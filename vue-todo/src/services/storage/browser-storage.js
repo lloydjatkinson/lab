@@ -4,7 +4,6 @@ import {
     setKeyValue
 } from './storage/browser-storage';
 
-export function save(text) {
+export function save (text) {
     setKeyValue('test', text);
 }
-
