@@ -1,7 +1,6 @@
 <template>
     <div>
         <h1>Tasks</h1>
-        {{ keyExists }}
         <div>
             {{ pendingCount }} / {{ totalCount }}
         </div>
@@ -10,6 +9,7 @@
                 <li v-for="(item, index) in pendingItems" v-bind:key="index">{{ item.title }}</li>
             </ul>
         </div>
+        <hr />
         <div class="completed">
             <ul>
                 <li v-for="(item, index) in completedItems" v-bind:key="index">{{ item.title }}</li>
@@ -35,8 +35,16 @@ export default {
                 category: 'yellow',
                 completed: true
             }, {
-                title: 'Do other things',
+                title: 'Do other things with a really long string to test the page layout - hopefully it will look OK?',
                 category: 'default',
+                completed: false
+            }, {
+                title: 'Some other item',
+                category: 'yellow',
+                completed: true
+            }, {
+                title: 'Some other item',
+                category: 'yellow',
                 completed: false
             }]
         }
@@ -53,9 +61,6 @@ export default {
         },
         totalCount: function () {
             return this.items.length;
-        },
-        keyExists: function () {
-            return keyExists('12345test');
         }
     },
     methods: {
@@ -66,19 +71,31 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    @import "../styles/palette.scss";
+
+    .list-padding {
+        li {
+            padding: 10px;
+        }
+    }
+
     ul {
         list-style-type: none;
         padding: 0px;
-    }
-    
-    ul li {
-        padding: 10px;
+
+        li {
+            padding: 10px;
+        }
     }
 
     .completed li {
         font-style: italic;
         text-decoration: line-through;
+    }
+
+    .completed li:nth-child(odd) {
+        background-color: #F2F2F2;
     }
 
     .pending li:nth-child(odd) {
