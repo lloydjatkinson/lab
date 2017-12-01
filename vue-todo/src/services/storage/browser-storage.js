@@ -21,3 +21,7 @@ export function removeKeyValue (key) {
 export function clearStorage () {
     localStorage.clear();
 }
+
+export function test (a, b) {
+    return a + b;
+}

@@ -23,28 +23,15 @@ import { keyExists } from '../services/storage/browser-storage';
 
 export default {
     name: 'Todo',
+    created: function () {
+        console.log('created');
+    },
     data () {
         return {
             item: 'Finish this component',
             items: [{
                 title: 'Finish this component',
                 category: 'green',
-                completed: false
-            }, {
-                title: 'Do more things',
-                category: 'yellow',
-                completed: true
-            }, {
-                title: 'Do other things with a really long string to test the page layout - hopefully it will look OK?',
-                category: 'default',
-                completed: false
-            }, {
-                title: 'Some other item',
-                category: 'yellow',
-                completed: true
-            }, {
-                title: 'Some other item',
-                category: 'yellow',
                 completed: false
             }]
         }
