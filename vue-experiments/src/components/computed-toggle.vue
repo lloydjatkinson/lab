@@ -3,8 +3,8 @@
         <p>You have selected {{ selected.length }}</p>
         <div v-for="(item, index) in items" v-bind:key="index">
             <button
-                v-bind:class="{ selected: selected == item.selected }"
-                v-on:click="selectValue(index)">
+                :class="{ selected: selected == item.selected }"
+                v-on:click="toggleSelectedItem(index)">
                 {{ item.value }}
             </button>
         </div>
@@ -34,7 +34,7 @@ export default {
         }
     },
     methods: {
-        selectValue: function (itemIndex) {
+        toggleSelectedItem: function (itemIndex) {
             this.items[itemIndex].selected = !this.items[itemIndex].selected;
         }
     }
@@ -46,9 +46,5 @@ export default {
         .selected {
             background-color: green;
         }
-    }
-
-    .selected {
-        background-color: green;
     }
 </style>
