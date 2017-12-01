@@ -1,9 +1,9 @@
 <template>
     <div>
-        <p>You have selected {{ selected.length }}</p>
+        <p>You have selected {{ selectedItems.length }}</p>
         <div v-for="(item, index) in items" v-bind:key="index">
             <button
-                :class="{ selected: selected == item.selected }"
+                v-bind:class="{ selected: item.selected }"
                 v-on:click="toggleSelectedItem(index)">
                 {{ item.value }}
             </button>
@@ -29,7 +29,7 @@ export default {
         }
     },
     computed: {
-        selected: function () {
+        selectedItems: function () {
             return this.items.filter(item => item.selected)
         }
     },
@@ -43,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
     button {
-        .selected {
+        &.selected {
             background-color: green;
         }
     }
