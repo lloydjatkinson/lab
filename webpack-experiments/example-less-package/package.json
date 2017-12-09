@@ -1,0 +1,12 @@
+{
+  "name": "example-less-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "stylelint .\/src\/**\/*.less"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
