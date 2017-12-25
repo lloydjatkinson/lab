@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "stylelint .\/src\/**\/*.less"
+    "less-lint": "stylelint ./src/**/*.less",
+    "less-verify": "lessc ./src/global.less"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "less": "^2.7.3",
+    "stylelint": "^8.3.1"
+  }
 }
